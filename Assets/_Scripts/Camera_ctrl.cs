@@ -8,11 +8,14 @@ public class Camera_ctrl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		offset = transform.position - player.transform.position;
+		//offset.z = 0;
 	}
-	
+
 	// Update is called once per frame
 	void LateUpdate () {
-		transform.position = player.transform.position + offset;
+		Vector3 player_pos = player.transform.position;
+		player_pos.y = 0f;
+		transform.position = player_pos + offset;
 
 	}
 }
