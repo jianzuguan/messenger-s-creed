@@ -18,7 +18,7 @@ public class Player_ctrl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		//transform.Rotate(0,Input.GetAxis("Rotate")*60*Time.deltaTime,0);
 		transform.Translate (speed_ctrl*Input.GetAxis ("Horizontal") * Time.deltaTime,0f,speed_ctrl*Time.deltaTime* Input.GetAxis ("Vertical"));
 		if (Input.GetKeyDown (KeyCode.Space)&&can_jump) 
 		{
